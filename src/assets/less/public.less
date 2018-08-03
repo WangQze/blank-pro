@@ -1,0 +1,74 @@
+
+
+
+/* 背景图片居中 */
+.bgimg-center (@url){
+  background-image:url("@{url}");
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-size: cover;
+}
+/* 背景图片群显示有白边 */
+.bgimg-contain (@url){
+	background-image:url("@{url}");
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-size: contain;
+}
+/* 转动角度 */
+.vrindex-butt-transf (@vrindex-butt-transf){
+  transform:rotate(@vrindex-butt-transf);
+  -ms-transform:rotate(@vrindex-butt-transf);   /* IE 9 */
+  -moz-transform:rotate(@vrindex-butt-transf);  /* Firefox */
+  -webkit-transform:rotate(@vrindex-butt-transf); /* Safari 和 Chrome */
+  -o-transform:rotate(@vrindex-butt-transf);  /* Opera */
+}
+/* 接受变形目标 */
+.acapt-transf (@vrmask-clidren){
+  transition: transform @vrmask-clidren;
+  -moz-transition: -moz-transform @vrmask-clidren;  /* Firefox 4 */
+  -webkit-transition: -webkit-transform @vrmask-clidren; /* Safari 和 Chrome */
+  -o-transition: -o-transform @vrmask-clidren;  /* Opera */
+}
+/* 变形通用 */
+.acapt-public (@vrmask-clidren) {
+	transition: @vrmask-clidren;
+  -moz-transition: @vrmask-clidren;  /* Firefox 4 */
+  -webkit-transition: @vrmask-clidren; /* Safari 和 Chrome */
+  -o-transition: @vrmask-clidren;  /* Opera */
+}
+/* 模糊效果 */
+.filt-blur (@distan:5px){
+	-webkit-filter: blur(@distan);
+  -moz-filter: blur(@distan);
+  -o-filter: blur(@distan);
+  -ms-filter: blur(@distan);
+  filter: blur(@distan);
+}
+/* 全居中 */
+.allcenter{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/* bord-box */
+.box-siz (@bor:"border-box"){
+  box-sizing:@bor;
+  -moz-box-sizing:@bor; /* Firefox */
+  -webkit-box-sizing:@bor; /* Safari */
+}
+/* 字体默认函数 */
+.font-act(@fonsiz:0, @foncol:#000, @linhei:0, @hei:0) {
+  font-size: @fonsiz;
+  color: @foncol;
+  line-height: @linhei;
+  height: @hei;
+}
+/* 盒子圆角 */
+.box-rads (@rads:5px){
+	border-radius:@rads;
+	-moz-border-radius:@rads; /* 老的 Firefox */
+}
